@@ -6,8 +6,8 @@ class Libre < Formula
   sha1 '7a6f7d4fe8679761a23b5ef1a29e30ce0c6b854f'
 
   def install
-    system "make"
-    system "make install"
+    system "make", "PREFIX=#{prefix}"
+    system "make", "PREFIX=#{prefix}", "install"
   end
 
   def test
