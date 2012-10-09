@@ -7,8 +7,8 @@ class Baresip < Formula
   depends_on 'librem' => :build
 
   def install
-    system "make"
-    system "make install"
+    system "make", "PREFIX=#{prefix}"
+    system "make", "PREFIX=#{prefix}", "install"
   end
 
   def test
